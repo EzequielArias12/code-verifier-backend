@@ -16,10 +16,16 @@ app.get('/',(req:Request , res:Response)=>{
     res.send('Welcome to APP RESTFULL: Express + TS + Jest + Nodemon Swagger + Mongoose')
 });
 
-app.get('/hello',(req:Request , res:Response)=>{
-    //Send Hello world
+app.get("/hello",(req:Request , res:Response)=>{
+    
+    let {name = 'anonimo'} = req.query;
+    //Send Welcome 
 
-    res.send("Welcome to : Heello page")
+         res.status(200).json({
+            data : {
+                message : `Bienvenido ${name}`
+            }
+        });
 });
 
 app.get('/bye',(req:Request, res:Response)=> {
@@ -28,8 +34,8 @@ app.get('/bye',(req:Request, res:Response)=> {
         data : {
             message : "Goodbye, world"
         }
-    })
-})
+    });
+});
 
 //Execute app and Listen Request To PORT 
 
