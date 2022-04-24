@@ -22,6 +22,15 @@ app.get('/hello',(req:Request , res:Response)=>{
     res.send("Welcome to : Heello page")
 });
 
+app.get('/bye',(req:Request, res:Response)=> {
+    //Send Good Bye
+    res.status(200).json({
+        data : {
+            message : "Goodbye, world"
+        }
+    })
+})
+
 //Execute app and Listen Request To PORT 
 
 app.listen(port,() => {
