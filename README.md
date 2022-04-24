@@ -22,3 +22,8 @@ A continuacion esta la explicacion de los scripts, dependencias y lo que necesit
 - Jest - es una librería que nos permite escribir y ejecutar tests (conjunto a su version TS ts-jest).
 - ts-node - Ejecución de TypeScript y REPL para node.js, con mapa de origen y compatibilidad nativa con ESM.
 
+**env**
+
+    Que crear en el .env
+
+- PORT = "Tu port"
