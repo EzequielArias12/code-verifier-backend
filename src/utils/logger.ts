@@ -1,5 +1,5 @@
 export const LogInfo = ( message: string) => {
-    console.log(`Success: ${message}`);
+    console.log(`Info : ${message}`);
 }
 
 export const LogSuccess = ( message: string) => {
@@ -7,10 +7,10 @@ export const LogSuccess = ( message: string) => {
 }
 
 export const LogWarning = ( message: string) => {
-    console.log(`Success: ${message}`);
+    console.log(`Warning: ${message}`);
 }
 
 export const LogError = ( message: string) => {
-    console.log(`Success: ${message}`);
+    console.log(`Error: ${message}`);
 }
 

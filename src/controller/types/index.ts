@@ -14,3 +14,9 @@ export type ErroResponse = {
     error : string,
     message : string
 }
+
+
+export type BasicGoodBye = {
+    message : string,
+    fecha :  string
+}

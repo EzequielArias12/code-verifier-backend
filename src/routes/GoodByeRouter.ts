@@ -1,25 +1,25 @@
-import { BasicResponse } from "@/controller/types";
+import {  BasicGoodBye } from "@/controller/types";
 import express,{ Request, Response } from "express";
-import { HelloController } from "../controller/HelloController";
+import { GoodByeController } from "../controller/GoodByeController";
 import { LogInfo } from "../utils/logger";
 
 //Router from Express
-let helloRouter = express.Router();
+let goodByeRouter = express.Router();
 
-//GET --> http://localhost:3100/api/hello?name=eze
+//GET --> http://localhost:3100/api/Goodbye?name=eze
 
-helloRouter.route('/',)
+goodByeRouter.route('/',)
     .get(async ( req:Request, res:Response )=>{
         //Obtener query params
 
         let name:any = req?.query?.name; 
         LogInfo(`Query Params ${name}`)
         //COntroller instance to execute method
-        const controller:HelloController = new HelloController();
+        const controller:GoodByeController = new GoodByeController();
         //Obtain Response
-        const response: BasicResponse  = await controller.getMessage(name);
+        const response: BasicGoodBye  = await controller.getMessage(name);
         //Send to the client the response
         return res.send(response);  
     })
 
-    export default helloRouter;  
+    export default goodByeRouter;  
