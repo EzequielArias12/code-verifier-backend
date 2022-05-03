@@ -14,7 +14,7 @@ helloRouter.route('/',)
 
         let name:any = req?.query?.name; 
         LogInfo(`Query Params ${name}`)
-        //COntroller instance to execute method
+        //Controller instance to execute method
         const controller:HelloController = new HelloController();
         //Obtain Response
         const response: BasicResponse  = await controller.getMessage(name);

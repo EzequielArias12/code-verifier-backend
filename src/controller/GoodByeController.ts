@@ -1,8 +1,7 @@
 import {  BasicGoodBye } from "./types"
 import { IHelloController } from "./interfaces";
 import { LogSuccess } from '../utils/logger';
-import { json } from "stream/consumers";
-import { AnyRecord } from "dns";
+
 
 export class GoodByeController implements IHelloController {
     public async getMessage(name?: string): Promise<BasicGoodBye> {

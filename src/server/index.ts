@@ -20,6 +20,9 @@ const port:string | number = process.env.PORT || 3100;
 //Fom this point onover : http://localhost:3100/api/
 server.use('/api',router)
 
+//Static server
+server.use(express.static('public'));
+
 //TODO Mongoose Connection
 
 //Security Config

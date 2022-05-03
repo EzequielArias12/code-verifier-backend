@@ -28,6 +28,6 @@ rootRouter.get('/',(req:Request , res:Response)=>{
 server.use('/',rootRouter); // http://localhost:3100/api
 server.use('/hello',helloRouter); // http://localhost:3100/api/hello --> HelloRouter
 //Add more routes to the app 
-server.use('/goodbye',goodByeRouter);
+server.use('/goodbye',goodByeRouter);   // http://localhost:3100/api/goodbye
 
 export default server;
